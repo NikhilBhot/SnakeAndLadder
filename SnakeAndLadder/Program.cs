@@ -1,4 +1,6 @@
-﻿namespace SnakeAndLadder
+﻿using System;
+
+namespace SnakeAndLadder
 {
     class Program
     {
@@ -9,9 +11,10 @@
         }
 
 
-        //UC-01-Snake and Ladder game played with single player at start position 0
+        
         static void PlayGame()
         {
+            //UC-01-Snake and Ladder game played with single player at start position 0
             int currentPosition = 0;
             int targetPosition = 100;
             Random random = new Random();
@@ -21,7 +24,9 @@
                 Console.WriteLine("Current Position: " + currentPosition);
                 Console.WriteLine("Press any key to roll the dice...");
                 Console.ReadKey();
-
+                /* UC-02-The Player rolls the die to get a number between 1 to 6. 
+                    - Use((RANDOM)) to get the number between 1 to 6
+                */
                 int diceValue = random.Next(1, 7);
                 Console.WriteLine("You rolled a " + diceValue);
 
